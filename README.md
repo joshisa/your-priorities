@@ -146,12 +146,21 @@ Install database dependencies
 ````bash
 sudo apt-get install postgresql
 sudo apt-get install mysql-server
-
-
-
 ````
 
-Then start the psql shell
+Development on Mac OSX Mavericks 10.9
+====================
+Install PostGres Application @ http://postgresapp.com/
+Install HomeBrew @ http://brew.sh
+
+````bash
+export CONFIGURE_ARGS="with-pg-config=/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config”
+brew install mysql
+brew install imagemagick
+bundle install
+````
+
+Then start the psql shell via bash (Linux) or via the Postgresapp provided psql shell (OSX)
 ````bash
 sudo su postgres
 psql
@@ -159,7 +168,7 @@ psql
 
 When in psql create a user and the Your Priorities dev database
 ````bash
-CREATE USER puser PASSWORD 'xxxxxxxx'
+CREATE USER puser PASSWORD 'xxxxxxxx';
 CREATE DATABASE yrpri_dev WITH ENCODING 'utf8';
 GRANT ALL PRIVILEGES ON DATABASE yrpri_dev TO puser;
 ALTER USER puser CREATEDB;
