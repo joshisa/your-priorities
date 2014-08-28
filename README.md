@@ -154,7 +154,7 @@ Install PostGres Application @ http://postgresapp.com/
 Install HomeBrew @ http://brew.sh
 
 ````bash
-export CONFIGURE_ARGS="with-pg-config=/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config”
+export CONFIGURE_ARGS="with-pg-config=/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config"
 brew install mysql
 brew install imagemagick
 bundle install
